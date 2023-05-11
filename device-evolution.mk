@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_lynx.mk \
-    $(LOCAL_DIR)/factory_lynx.mk \
-    $(LOCAL_DIR)/evolution_lynx.mk
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-COMMON_LUNCH_CHOICES := \
-    evolution_lynx-userdebug \
-    evolution_lynx-eng
+PRODUCT_PACKAGES += MySettingsOverlay
